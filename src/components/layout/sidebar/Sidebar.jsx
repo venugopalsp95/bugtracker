@@ -12,7 +12,7 @@ import { UIContext } from "../../../context/UIContext";
 const Sidebar = () => {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
-  const { isOpen, closeSidebar, openSidebar } = useContext(UIContext);
+  const { isOpen, closeSidebar, toogleSidebar } = useContext(UIContext);
 
   const handleLogout = () => {
     logout();
@@ -25,7 +25,7 @@ const Sidebar = () => {
     <div>
       <img
         className="menu-button"
-        onClick={openSidebar}
+        onClick={toogleSidebar}
         src={menuIcon}
         alt=""
       />
