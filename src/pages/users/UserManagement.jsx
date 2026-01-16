@@ -21,6 +21,7 @@ const UserManagement = () => {
   const [selectedUser, setSelectedUser] = useState(null);
 
   const { user } = useContext(AuthContext);
+  const currentUser = user;
   if (!user) return null;
   const role = user?.role?.toLowerCase()?.trim();
   const can = permissions[role] || {};
@@ -45,6 +46,11 @@ const UserManagement = () => {
     setEditModal(true);
     setSelectedUser(user);
   };
+
+  const isAdmin = currentUser?.role === "admin";
+  const isTargetedAdmin = user?.role !== "admin";
+
+  const canDelete = isAdmin && !isTargetedAdmin;
 
   return (
     <>
@@ -102,11 +108,13 @@ const UserManagement = () => {
                         src={editIcon}
                         alt=""
                       />
-                      <img
-                        onClick={() => deleteUser(user.id)}
-                        src={deleteIcon}
-                        alt=""
-                      />
+                      {canDelete && (
+                        <img
+                          onClick={() => deleteUser(user.id)}
+                          src={deleteIcon}
+                          alt=""
+                        />
+                      )}
                     </td>
                   )}
                 </tr>

@@ -30,7 +30,14 @@ export const UserProvider = ({ children }) => {
     );
   };
 
-  const deleteUser = (id) => setUsers(users.filter((user) => id !== user.id));
+  const deleteUser = (id) => {
+    const target = users.find((user) => user.id === id);
+    if (target.role === "admin") {
+      alert("Admin users cannot be deleted");
+      return;
+    }
+    setUsers((prev) => prev.filter((user) => id !== user.id));
+  };
   return (
     <UserContext.Provider value={{ users, addUser, updateUser, deleteUser }}>
       {children}

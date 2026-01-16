@@ -117,7 +117,7 @@ table tbody tr:last-child td {
 }
 
 .modal {
-  background: white;
+  background: rgba(255, 255, 255);
   padding: 20px;
   width: 300px;
   border-radius: 8px;

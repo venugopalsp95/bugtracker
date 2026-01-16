@@ -5,31 +5,27 @@ import dashboardIcon from "../../../assets/icons/dashboard.png";
 import listIcon from "../../../assets/icons/list.png";
 import usersIcon from "../../../assets/icons/users.png";
 import reportsIcon from "../../../assets/icons/reports.png";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
+import { UIContext } from "../../../context/UIContext";
+
 const Sidebar = () => {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, closeSidebar, openSidebar } = useContext(UIContext);
 
   const handleLogout = () => {
     logout();
     navigate("/login");
   };
-  useEffect(() => {
-    if (window.innerWidth < 1024) {
-      setIsOpen(false);
-    }
-  }, []);
 
-  const closeSideBar = () => setIsOpen(false);
   if (!user) return null;
 
   return (
     <div>
       <img
         className="menu-button"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={openSidebar}
         src={menuIcon}
         alt=""
       />
@@ -42,23 +38,23 @@ const Sidebar = () => {
                 to={"/dashboard"}
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
-                <li onClick={closeSideBar}>
+                <li onClick={closeSidebar}>
                   <img src={dashboardIcon} alt="" /> Dashboard
                 </li>
               </NavLink>
               <NavLink to={"/buglist"}>
-                <li onClick={closeSideBar}>
+                <li onClick={closeSidebar}>
                   <img src={listIcon} alt="" /> Bug List
                 </li>
               </NavLink>
               <NavLink to={"/users"}>
-                <li onClick={closeSideBar}>
+                <li onClick={closeSidebar}>
                   <img src={usersIcon} alt="" />
                   Users
                 </li>
               </NavLink>
               <NavLink to={"reports"}>
-                <li onClick={closeSideBar}>
+                <li onClick={closeSidebar}>
                   <img src={reportsIcon} alt="" />
                   Reports
                 </li>

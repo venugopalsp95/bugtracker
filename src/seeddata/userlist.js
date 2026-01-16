@@ -22,4 +22,18 @@ export default [
     role: "developer",
     bugs: 2,
   },
+  {
+    id: 6,
+    name: "gill",
+    email: "dev@email.com",
+    role: "qa",
+    bugs: 2,
+  },
+  {
+    id: 7,
+    name: "shreyas",
+    email: "dev@email.com",
+    role: "developer",
+    bugs: 2,
+  },
 ];
