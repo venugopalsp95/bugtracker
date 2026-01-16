@@ -1,13 +1,15 @@
 .dashboard-container {
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+
   gap: 1.5rem;
-  width: 100%;
 }
 
 .bug-quantity-cards {
   display: grid;
+  width: 100%;
   justify-items: center;
   align-self: center;
   grid-template-columns: repeat(2, 1fr);
@@ -20,7 +22,7 @@
 .bug-quantity-cards .bug-quantity-card {
   width: 100%;
   box-shadow: var(--box-shadow);
-  padding: 1rem 0.6rem;
+  padding: 1rem 0.5rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
@@ -133,6 +135,7 @@
   box-shadow: var(--box-shadow);
   border-radius: 0.5rem;
   padding-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 400px) {

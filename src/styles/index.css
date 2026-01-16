@@ -61,6 +61,10 @@ td {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+td:hover {
+  overflow: visible;
+  height: auto;
+}
 th,
 td {
   padding: 0.5rem;

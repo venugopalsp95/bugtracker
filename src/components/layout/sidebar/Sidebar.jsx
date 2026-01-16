@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./sidebar.css";
 import menuIcon from "../../../assets/icons/menu.png";
 import dashboardIcon from "../../../assets/icons/dashboard.png";
@@ -16,6 +16,11 @@ const Sidebar = () => {
     logout();
     navigate("/login");
   };
+  useEffect(() => {
+    if (window.innerWidth < 1024) {
+      setIsOpen(false);
+    }
+  }, []);
 
   const closeSideBar = () => setIsOpen(false);
   if (!user) return null;

@@ -20,10 +20,10 @@
   justify-content: space-around;
 }
 .sidebar nav {
-  height: 80%;
+  height: 60%;
 }
 .sidebar .profile {
-  height: 20%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
