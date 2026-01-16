@@ -23,7 +23,7 @@ const Login = () => {
     }
 
     login(foundUser);
-    navigate("/");
+    navigate("/dashboard");
   };
 
   return (

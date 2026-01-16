@@ -7,8 +7,9 @@ import Login from "../pages/login/Login";
 const AppRoutes = () => {
   return (
     <Routes>
+      <Route path="/" element={<Login />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/" element={<DashBoard />} />
+      <Route path="/dashboard" element={<DashBoard />} />
       <Route path="/buglist" element={<BugList />} />
       <Route path="/users" element={<UserManagement />} />
       <Route path="/reports" element={<Reports />} />
