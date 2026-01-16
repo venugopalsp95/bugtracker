@@ -34,7 +34,7 @@ const Sidebar = () => {
           <nav>
             <ul>
               <NavLink
-                to={"/"}
+                to={"/dashboard"}
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 <li onClick={closeSideBar}>

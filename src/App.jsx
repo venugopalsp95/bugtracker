@@ -1,15 +1,14 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "../src/styles/index.css";
 import Layout from "./components/layout/Layout";
 import AppRoutes from "./routes/AppRoutes";
 import { BugProvider } from "./context/BugContext";
 import { UserProvider } from "./context/UserContext";
-import { AuthContext, AuthProvider } from "./context/AuthContext";
-import { useContext } from "react";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <UserProvider>
         <AuthProvider>
           <BugProvider>
@@ -19,7 +18,7 @@ function App() {
           </BugProvider>
         </AuthProvider>
       </UserProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
