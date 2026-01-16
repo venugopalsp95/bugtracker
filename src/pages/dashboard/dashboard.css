@@ -1,0 +1,205 @@
+.dashboard-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.bug-quantity-cards {
+  display: grid;
+  justify-items: center;
+  align-self: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.bug-quantity-cards .bug-quantity-card {
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  padding: 1rem 0.6rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  /* gap: 1rem; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bug-details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.bug-details .bug-list {
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  padding-top: 1rem;
+}
+.bug-details .bug-chart {
+  width: 200px;
+  height: 200px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.user-details .team {
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  padding-top: 1rem;
+}
+.user-details .recent-activity {
+  width: 100%;
+}
+.bug-data p:first-child {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.bug-data p:last-child {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.team-members {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: var(--box-shadow);
+  padding: 1rem 0.5rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+.team-members .user {
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.team-members .user .user-name {
+  text-align: start;
+}
+.team-members .user .user-name p:first-child {
+  font-weight: bold;
+}
+.team-members .user .user-name p:last-child {
+  font-size: 0.8rem;
+}
+.team-members .user .open-bugs {
+  font-size: 0.8rem;
+}
+.team-members .user .open-bugs span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.user-details .recent-activity .recent-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--box-shadow);
+  padding: 1rem 0.5rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+.user-details .recent-activity p {
+  box-shadow: var(--box-shadow);
+  padding: 1rem 0.5rem;
+  white-space: nowrap;
+  text-align: start;
+  border-radius: 0.5rem;
+}
+.user-details .recent-activity p span {
+  font-weight: bold;
+}
+.user-details .recent-activity {
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 400px) {
+  .bug-quantity-cards {
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 610px) {
+  .bug-quantity-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .bug-quantity-cards .bug-quantity-card {
+    width: 8rem;
+  }
+  .bug-list table {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bug-quantity-cards {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+  }
+  .small-screen-hide {
+    display: table-cell;
+  }
+  .bug-quantity-cards .bug-quantity-card {
+    width: 10rem;
+  }
+
+  .bug-details,
+  .user-details {
+    flex-direction: row;
+  }
+
+  .user-details .team {
+    padding: 1rem;
+  }
+  .user-details .team-members {
+    padding: 1rem;
+  }
+
+  .user-details .team-members .user {
+    gap: 2rem;
+  }
+  .recent-activity {
+    padding: 1rem;
+  }
+  .user-details .recent-activity .recent-activity-list {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bug-quantity-cards .bug-quantity-card {
+    width: 14rem;
+  }
+  .team {
+    width: 50%;
+  }
+  .recent-activity {
+    width: 50%;
+  }
+}

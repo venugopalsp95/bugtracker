@@ -1,0 +1,88 @@
+.sidebar {
+  position: fixed;
+  left: -200px;
+  top: 60px;
+  width: 200px;
+  height: 100vh;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 79, 140, 1) 100%
+  );
+  color: white;
+  z-index: 1000;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.sidebar nav {
+  height: 80%;
+}
+.sidebar .profile {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+.sidebar .profile .profile-name {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.sidebar .profile .profile-name .profile-role {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.sidebar.open {
+  left: 0;
+}
+.menu-button {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+}
+
+.sidebar nav ul {
+  display: flex;
+
+  padding: 2rem 0.5rem;
+  flex-direction: column;
+}
+.sidebar nav ul li {
+  padding: 1.5rem 0.8rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.sidebar .active {
+  border-radius: 0.2rem;
+  background-color: #0059b3;
+}
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    /* display: block; */
+    left: 0;
+    top: 60px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+}

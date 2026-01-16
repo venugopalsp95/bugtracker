@@ -1,0 +1,26 @@
+.header-container {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: end;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 79, 140, 1) 100%
+  );
+}
+.bug-tracker-title {
+  width: 200px;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
