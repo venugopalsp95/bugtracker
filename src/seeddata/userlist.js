@@ -1,6 +1,6 @@
 export default [
   { id: 1, name: "admin", email: "admin@email.com", role: "admin", bugs: 1 },
-  { id: 2, name: "Lee", email: "lee@email.com", role: "qa", bugs: 1 },
+  { id: 2, name: "qa", email: "qa@email.com", role: "qa", bugs: 1 },
   {
     id: 3,
     name: "Rohit",
@@ -17,9 +17,9 @@ export default [
   },
   {
     id: 5,
-    name: "David",
-    email: "david@email.com",
-    role: "qa",
+    name: "dev",
+    email: "dev@email.com",
+    role: "developer",
     bugs: 2,
   },
 ];
