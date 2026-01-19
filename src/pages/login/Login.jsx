@@ -6,7 +6,7 @@ import "./login.css";
 import { UIContext } from "../../context/UIContext";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("admin");
   const { users } = useContext(UserContext);
   const { login } = useContext(AuthContext);
   const { closeSidebar } = useContext(UIContext);
@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
 
     const foundUser = users.find(
-      (user) => user.name.toLowerCase() === username.toLowerCase()
+      (user) => user.name.toLowerCase() === username.toLowerCase(),
     );
 
     if (!foundUser) {
