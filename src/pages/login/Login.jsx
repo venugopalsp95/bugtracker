@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
 
     const foundUser = users.find(
-      (user) => user.name.toLowerCase() === username.toLowerCase(),
+      (user) => user.name.toLowerCase() === username.toLowerCase().trim(),
     );
 
     if (!foundUser) {
