@@ -85,16 +85,16 @@ A **Frontend-only Bug Tracker Dashboard** built using **React + JavaScript**, de
 
 ## Tech Stack
 
-| Category   | Tech                      |
-| ---------- | ------------------------- |
-| Frontend   | React (Vite)              |
-| Language   | JavaScript                |
-| Routing    | React Router DOM          |
-| State      | Context API               |
-| Charts     | Chart.js                  |
-| Styling    | CSS / Tailwind (optional) |
-| Storage    | localStorage              |
-| Deployment | GitHub Pages              |
+| Category   | Tech             |
+| ---------- | ---------------- |
+| Frontend   | React (Vite)     |
+| Language   | JavaScript       |
+| Routing    | React Router DOM |
+| State      | Context API      |
+| Charts     | Chart.js         |
+| Styling    | CSS              |
+| Storage    | localStorage     |
+| Deployment | GitHub Pages     |
 
 ---
 
