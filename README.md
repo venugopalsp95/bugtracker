@@ -169,7 +169,7 @@ src/
 
 ---
 
-# Role Permissions
+## Role Permissions
 
 | Action                | Admin | Developer | QA  |
 | --------------------- | ----- | --------- | --- |
