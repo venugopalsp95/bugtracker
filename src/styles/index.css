@@ -15,6 +15,7 @@
 body {
   width: 100%;
   height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,10 +73,9 @@ td {
   border-left: 1px solid rgba(128, 128, 128, 0.338);
   border-bottom: 1px solid rgba(128, 128, 128, 0.415);
 }
-
-th:nth-child(1),
-td:nth-child(1) {
-  border-left: none !important;
+th:first-child,
+td:first-child {
+  border-left: none;
 }
 
 table tbody tr:last-child td {
@@ -86,9 +86,9 @@ table tbody tr:last-child td {
   justify-content: space-between;
   align-items: center;
 }
-/* .small-screen-hide {
+.small-screen-hide {
   display: none;
-} */
+}
 .active {
   background-color: #090979;
 }
@@ -140,7 +140,6 @@ table tbody tr:last-child td {
   .hide-smallscreen {
     display: table-cell;
   }
-
   .modal {
     width: 500px;
   }
