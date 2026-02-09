@@ -38,7 +38,7 @@ const BugList = () => {
 
   const { currentPage, totalPages, paginatedData, goToPage } = usePagination(
     filteredBugList,
-    6
+    6,
   );
   const severityStyle = (severity) => {
     switch (severity?.toLowerCase()) {
