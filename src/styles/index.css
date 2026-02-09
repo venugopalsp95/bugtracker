@@ -72,8 +72,7 @@ td {
   border-left: 1px solid rgba(128, 128, 128, 0.338);
   border-bottom: 1px solid rgba(128, 128, 128, 0.415);
 }
-th:nth-child(1 of :not(.hide-smallscreen)),
-td:nth-child(1 of :not(.hide-smallscreen)),
+
 th:nth-child(1),
 td:nth-child(1) {
   border-left: none !important;
@@ -141,6 +140,7 @@ table tbody tr:last-child td {
   .hide-smallscreen {
     display: table-cell;
   }
+
   .modal {
     width: 500px;
   }
