@@ -12,18 +12,18 @@ const DashBoard = () => {
   const { bugs } = useContext(BugContext);
   const { users } = useContext(UserContext);
 
-  const recentBugs = [...bugs].slice(-2);
-  const recentUsers = [...users].slice(-4);
+  const recentBugs = [...bugs].slice(0, 2);
+  const recentUsers = [...users].slice(0, 4);
 
   const totalBugs = bugs.length;
   const openBugs = bugs.filter(
-    (bug) => bug.status.toLowerCase() === "open"
+    (bug) => bug.status.toLowerCase() === "open",
   ).length;
   const closeBugs = bugs.filter(
-    (bug) => bug.status.toLowerCase() === "close"
+    (bug) => bug.status.toLowerCase() === "close",
   ).length;
   const progressBugs = bugs.filter(
-    (bug) => bug.status.toLowerCase() === "progress"
+    (bug) => bug.status.toLowerCase() === "progress",
   ).length;
 
   const severityStyle = (severity) => {

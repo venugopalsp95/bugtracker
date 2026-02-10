@@ -177,7 +177,10 @@
   .user-details {
     flex-direction: row;
   }
-
+  .team {
+    width: 50%;
+    height: 100%;
+  }
   .user-details .team {
     padding: 1rem;
   }
@@ -199,9 +202,7 @@
   .bug-quantity-cards .bug-quantity-card {
     width: 14rem;
   }
-  .team {
-    width: 50%;
-  }
+
   .recent-activity {
     width: 50%;
   }

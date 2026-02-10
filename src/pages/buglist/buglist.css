@@ -32,6 +32,7 @@
 }
 .action-button img:hover {
   cursor: pointer;
-  transition: 0.3s;
-  background-color: #090979;
+  transition: 0.2s;
+  /* outline: 1px solid #004f8c; */
+  transform: scale(0.9);
 }
